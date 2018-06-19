@@ -7,7 +7,7 @@ use App\Parents;
 
 class ParentsController extends Controller
 {
-    public function RegisterParent{
+    public function RegisterParent(){
         $Parent= new Parents();
         $Parent->Email="TestEmail";
         $Parent->Password="Test Pass";
