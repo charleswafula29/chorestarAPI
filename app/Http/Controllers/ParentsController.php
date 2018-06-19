@@ -9,11 +9,11 @@ class ParentsController extends Controller
 {
     public function RegisterParent(){
         $Parent= new Parents();
-        $Parent->Email="TestEmail";
-        $Parent->Password="Test Pass";
-        $Parent->Nickname="TestNicky";
-        $Parent->Childname="Childname";
-        $Parent->ChildImage="RuthLove";
+        $Parent->Email=request('Email');
+        $Parent->Password=request('Password');
+        $Parent->Nickname=request('Nickname');
+        $Parent->Childname=request('ChildName');
+        $Parent->ChildImage=request('ChildImage');
         $Parent->save();
     }
 }
