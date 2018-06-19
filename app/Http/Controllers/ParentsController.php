@@ -11,6 +11,7 @@ class ParentsController extends Controller
         $Parent= new Parents();
         $Parent->Email=request('Email');
         $Parent->Password=request('Password');
+        $Parent->Nickname=request('Nickname');
         $Parent->Childname=request('ChildName');
         $Parent->ChildImage=request('ChildImage');
         $Parent->save();
