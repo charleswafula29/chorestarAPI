@@ -27,4 +27,5 @@ class ParentsController extends Controller
         return json_encode(['User'=>$Results]);   
         }
         }
+    }
 }
