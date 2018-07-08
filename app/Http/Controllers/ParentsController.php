@@ -20,6 +20,7 @@ class ParentsController extends Controller
         $Results[0]=$Fetched->Email;
         $Results[1]=$Fetched->Password;
         $Results[2]=$Fetched->Nickname;
+        $Results[3]=$Fetched->id;
         if($Results == null){
             return "Empty";
         }else{
