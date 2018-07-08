@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 Route::post('/Register','ParentsController@RegisterParent');
+Route::post('/RegisterChild','ChildrenController@Register');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
