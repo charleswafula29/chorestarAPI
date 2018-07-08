@@ -18,8 +18,6 @@ class CreateParentsTable extends Migration
             $table->String("Email");
             $table->String("Password");
             $table->String("Nickname");
-            $table->String("ChildName");
-            $table->String("ChildImage");
             $table->timestamps();
         });
     }
