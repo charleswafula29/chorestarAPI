@@ -18,6 +18,7 @@ class CreateChoresTable extends Migration
             $table->string('ChoreName');
             $table->string('ChoreImage');
             $table->string('ChorePoints');
+            $table->string('Email');
             $table->string('ChildName');
             $table->timestamps();
         });
