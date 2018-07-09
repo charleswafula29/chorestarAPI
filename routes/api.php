@@ -16,6 +16,8 @@ Route::post('/Register','ParentsController@RegisterParent');
 Route::get('/Login/{Email}/{Pass}','ParentsController@Login');
 Route::get('/FetchProfile/{Email}','ChildrenController@FetchProfile');
 Route::post('/RegisterChild','ChildrenController@Register');
+Route::post('/NewChore','ChoresController@NewChore');
+Route::get('/FetchChores/{Email}','ChoresController@FetchChores');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
