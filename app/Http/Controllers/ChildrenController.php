@@ -16,4 +16,9 @@ class ChildrenController extends Controller
         $child->Points=request('Points');
         $child->save();
     }
+    
+    public function FetchProfile($Email){
+        $User=Children::all()->where("Email",$Email);
+        return json_encode(['Profiles'=>$User]);
+    }
 }
