@@ -21,4 +21,9 @@ class ChoresController extends Controller
         $Chores=Chores::all()->where("Email",$Email)->where("Status","Pending");
         return json_encode(['Chores'=>$Chores]);
     }
+    
+    public function FetchAlerts($Email){
+        $Chores=Chores::all()->where("Email",$Email)->where("Status","Done");
+        return json_encode(['Chores'=>$Chores]);
+    }
 }
