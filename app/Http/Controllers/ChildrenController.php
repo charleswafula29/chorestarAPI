@@ -21,4 +21,9 @@ class ChildrenController extends Controller
         $User=Children::all()->where("Email",$Email);
         return json_encode(['Profiles'=>$User]);
     }
+    
+    public function DeleteProfile($Email,$ChildName){
+        $User=Children::all()->where("Email",$Email)->where("ChildName",$ChildName)->first();
+        $User->delete();
+    }
 }
