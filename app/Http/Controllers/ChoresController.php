@@ -27,7 +27,9 @@ class ChoresController extends Controller
         return json_encode(['Chores'=>$Chores]);
     }
     public function ChoreDone($Email,$ChildName,$ChoreName){
-        $Chores=Chores::all()->where("Email",$Email)->where("ChildName",$ChildName)->where("ChoreName",$ChoreName);
+        $Chores=Chores::all()->where("Email",$Email)->where("ChildName",$ChildName)->where("ChoreName",$ChoreName)->first();
+        $Chores->Status="Done";
+        $Chores->save();
         return json_encode(['Chores'=>$Chores]);
     }
  
