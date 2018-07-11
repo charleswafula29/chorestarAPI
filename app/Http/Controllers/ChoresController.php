@@ -27,7 +27,7 @@ class ChoresController extends Controller
         return json_encode(['Chores'=>$Chores]);
     }
     public function ChoreDone($Email,$ChildName,$ChoreName){
-        $Chores=Chores::all()->find($Email)->find($ChildName)->find($ChoreName);
+        $Chores=Chores::all()->find("Email",$Email)->find("ChildName",$ChildName)->find("ChoreName",$ChoreName);
         return json_encode(['Chores'=>$Chores]);
     }
  
