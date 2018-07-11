@@ -22,7 +22,7 @@ Route::get('/FetchChores/{Email}','ChoresController@FetchChores');
 Route::get('/FetchAlerts/{Email}','ChoresController@FetchAlerts');
 Route::get('/ChoreDone/{Email}/{ChildName}/{ChoreName}','ChoresController@ChoreDone');
 Route::get('/ChoreDecline/{Email}/{ChildName}/{ChoreName}','ChoresController@ChoreDecline');
-Route::get('/ChoreAccept/{Email}/{ChildName}/{ChoreName}','ChoresController@ChoreAccept');
+Route::get('/ChoreAccept/{Email}/{ChildName}/{ChoreName}/{ChorePoints}','ChoresController@ChoreAccept');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
