@@ -15,6 +15,7 @@ use Illuminate\Http\Request;
 Route::post('/Register','ParentsController@RegisterParent');
 Route::get('/Login/{Email}/{Pass}','ParentsController@Login');
 Route::get('/FetchProfile/{Email}','ChildrenController@FetchProfile');
+Route::get('/DeleteProfile/{Email}/{ChildName}','ChildrenController@DeleteProfile');
 Route::post('/RegisterChild','ChildrenController@Register');
 Route::post('/NewChore','ChoresController@NewChore');
 Route::get('/FetchChores/{Email}','ChoresController@FetchChores');
