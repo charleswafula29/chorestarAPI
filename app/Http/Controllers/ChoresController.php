@@ -18,7 +18,7 @@ class ChoresController extends Controller
     }
     
     public function FetchChores($Email){
-        $Chores=Chores::all()->where("Email",$Email)->where("Status","Pending")->take(7)->latest();
+        $Chores=Chores::all()->where("Email",$Email)->where("Status","Pending")->take(7);
         return $Chores;
     }
     
