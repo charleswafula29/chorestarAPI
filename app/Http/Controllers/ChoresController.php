@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Chores;
+use App\Children;
 
 class ChoresController extends Controller
 {
@@ -38,6 +39,16 @@ class ChoresController extends Controller
         $Chores->Status="Pending";
         $Chores->save();
         return json_encode(['Chores'=>$Chores]);
+    }
+    
+    public function ChoreAccept($Email,$ChildName,$ChoreName,$ChorePoints){
+        $Chores=Chores::all()->where("Email",$Email)->where("ChildName",$ChildName)->where("ChoreName",$ChoreName)->first();
+        $Chores->Status="Accepted";
+        $Chores->save();
+        
+        $User=Children::all()->where("Email",$Email)->where("ChildName",$ChildName)->first();
+        $User->Points=$ChorePoints;
+        $User->save();
     }
  
 }
