@@ -32,5 +32,12 @@ class ChoresController extends Controller
         $Chores->save();
         return json_encode(['Chores'=>$Chores]);
     }
+    
+    public function ChoreDecline($Email,$ChildName,$ChoreName){
+        $Chores=Chores::all()->where("Email",$Email)->where("ChildName",$ChildName)->where("ChoreName",$ChoreName)->first();
+        $Chores->Status="Pending";
+        $Chores->save();
+        return json_encode(['Chores'=>$Chores]);
+    }
  
 }
